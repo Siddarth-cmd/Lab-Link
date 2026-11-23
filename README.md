@@ -2,6 +2,10 @@
 
 Next.js App Router application for laboratory equipment discovery, projects, booking requests, and faculty approvals. Existing dashboard, navigation, responsive styling, catalog search and equipment details are preserved. The catalog uses Supabase when configured and clearly labeled seed data when it is not.
 
+## Live demo
+
+[Open LabLink](https://lab-link-tan.vercel.app/)
+
 ## Supabase setup
 
 1. Create a Supabase project and install the Supabase CLI.
