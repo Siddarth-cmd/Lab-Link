@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, CalendarDays, CheckCheck, FlaskConical, LayoutDashboard, MessagesSquare, Microscope, Sparkles } from "lucide-react";
+import { ArrowRight, CalendarDays, CheckCheck, FlaskConical, LayoutDashboard, MessagesSquare, Microscope } from "lucide-react";
 
 const navigation = [
   { label: "Overview", href: "/", icon: LayoutDashboard },
@@ -10,7 +10,6 @@ const navigation = [
   { label: "My bookings", href: "/bookings", icon: CalendarDays },
   { label: "Project requests", href: "/requests", icon: MessagesSquare },
   { label: "Faculty approvals", href: "/approvals", icon: CheckCheck },
-  { label: "AI scheduling", href: "/assistant", icon: Sparkles },
 ];
 
 export function Sidebar() {

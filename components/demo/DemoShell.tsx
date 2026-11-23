@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowLeft, CalendarDays, ClipboardCheck, FlaskConical, FolderKanban, Home, Lightbulb, Microscope, PackagePlus, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowLeft, CalendarDays, ClipboardCheck, FlaskConical, FolderKanban, Home, Lightbulb, Microscope, PackagePlus, ShieldCheck } from "lucide-react";
 
 type WorkspaceRole = "student" | "faculty";
 
@@ -12,7 +12,6 @@ const studentNavigation = [
   { label: "My Projects", href: "/student/projects", icon: FolderKanban },
   { label: "New Equipment Booking", href: "/student/bookings/new", icon: PackagePlus },
   { label: "My Bookings", href: "/student/bookings", icon: CalendarDays },
-  { label: "AI Assistant", href: "/student/assistant", icon: Sparkles },
 ];
 
 const facultyNavigation = [
