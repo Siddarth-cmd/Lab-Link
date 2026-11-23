@@ -1,0 +1,16 @@
+import Link from "next/link";
+import { ArrowRight, FlaskConical, Microscope, ShieldCheck, Sparkles } from "lucide-react";
+
+const workspaces = [
+  { href: "/student", title: "Student Portal", description: "Browse live laboratory equipment and view student project and booking tools.", icon: Microscope, tag: "Explore resources" },
+  { href: "/faculty", title: "Faculty Portal", description: "Browse equipment and see authorized department requests and review tools.", icon: ShieldCheck, tag: "Review & coordinate" },
+];
+
+export default function HomePage() {
+  return <main id="main-content" className="min-h-screen px-4 py-10 sm:px-8 sm:py-16"><div className="mx-auto max-w-6xl">
+    <header className="flex items-center gap-3"><span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#176b50] text-white"><FlaskConical size={24} aria-hidden="true"/></span><span><span className="block text-xl font-extrabold tracking-tight">lab<span className="text-[#176b50]">link</span></span><span className="block text-[11px] font-semibold tracking-[.12em] text-[#61736a]">SHARED LAB ACCESS</span></span></header>
+    <section className="mx-auto max-w-3xl py-16 text-center sm:py-24"><span className="inline-flex items-center gap-2 rounded-full border border-[#dce5df] bg-white px-3 py-1.5 text-xs font-bold text-[#28553e]"><Sparkles size={14} aria-hidden="true"/> PromptWars 2026 · LabLink</span><h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">Research works better <span className="text-[#176b50]">together.</span></h1><p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#52665c] sm:text-lg">A shared workspace for discovering laboratory equipment, requesting project access, and coordinating faculty decisions.</p><p className="mt-4 text-sm font-semibold text-[#52665c]">Choose a portal to continue. Equipment browsing is public. Showcase requests are isolated; institutional changes require verified roles.</p></section>
+    <section aria-label="Choose a workspace" className="grid gap-5 md:grid-cols-2">{workspaces.map(({ href, title, description, icon: Icon, tag }) => <Link key={href} href={href} className="group card flex min-h-64 flex-col p-6 transition-shadow hover:shadow-[0_14px_38px_rgba(31,54,44,.12)] focus-visible:outline-offset-4"><div className="flex items-center justify-between gap-4"><span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#e8f4ee] text-[#176b50]"><Icon size={26} aria-hidden="true"/></span><span className="rounded-full bg-[#f1f7f3] px-3 py-1 text-xs font-bold text-[#28553e]">{tag}</span></div><h2 className="mt-7 text-2xl font-extrabold">{title}</h2><p className="mt-2 max-w-lg flex-1 text-sm leading-6 text-[#52665c]">{description}</p><span className="mt-5 inline-flex min-h-11 items-center gap-2 self-start rounded-lg bg-[#176b50] px-4 py-2.5 text-sm font-bold text-white group-hover:bg-[#11573f]">Open workspace <ArrowRight size={16} aria-hidden="true"/></span></Link>)}</section>
+    <footer className="mt-10 rounded-xl border border-[#dce5df] bg-white px-4 py-3 text-center text-xs leading-5 text-[#52665c]">The showcase portals read the live catalog and use separate showcase records. Institutional projects and faculty decisions remain behind authenticated, authorized server routes.</footer>
+  </div></main>;
+}
